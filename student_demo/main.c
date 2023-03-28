@@ -3,6 +3,7 @@
 int main()
 {
     FILE *f;
+    int index;
 //    TStudent st;
     TStudent group[SIZE];
 
@@ -12,20 +13,52 @@ int main()
 //    inputGroup(group,2);
 //    printGroup(group,2);
 
-    if ((f=fopen("students.txt","r")) == NULL){
+//    if ((f=fopen("students.txt","r")) == NULL){
+    if ((f=fopen("students.csv","r")) == NULL){
         perror(NULL);
         exit(EXIT_FAILURE);
     }
 //    st = readFromTxt(f);
 //    print(st);
 
-    readGroup(f,group,2);
+    readGroup(f,group,5);
 
     fclose(f);
 
-    printGroup(group,2);
+    printGroup(group,5);
     printf("Average Mark is :%g\n",averageGroupMark(group,2));
 
-    printf("Hello world!\n");
+    index = studentMinAvMark(group,5);
+    printf("Student with minimum average mark is: ");
+    print(group[index]);
+
+    index = studentMaxAvMark(group,5);
+    printf("Student with maximum average mark is: ");
+    print(group[index]);
+
+    qsort(group,5,sizeof(TStudent),compareAvMark);
+    printGroup(group,5);
+
+    qsort(group,5,sizeof(TStudent),compareAvMarkDesc);
+    printGroup(group,5);
+
+    index = findAVMark(group,5,0,5);
+    if(index== -1)
+        printf("No such data...\n");
+    else
+        print(group[index]);
+
+    index = findAVMark(group,5,0,5.32);
+    if(index== -1)
+        printf("No such data...\n");
+    else
+        print(group[index]);
+
+    index = findAVMark(group,5,index+1,5.32);
+    if(index== -1)
+        printf("No such data...\n");
+    else
+        print(group[index]);
+//    printf("Hello world!\n");
     return 0;
 }
