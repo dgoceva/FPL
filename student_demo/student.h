@@ -31,5 +31,7 @@ int studentMaxAvMark(TStudent group[], unsigned lenGroup);
 int compareAvMark(const void *a, const void *b);
 int compareAvMarkDesc(const void *a, const void *b);
 int findAVMark(TStudent group[], unsigned lenGroup, int start, float mark);
+void writeToBin(char *fname,TStudent group[], unsigned lenGroup);
+void readFromBin(char *fname,TStudent group[], unsigned lenGroup);
 
 #endif // STUDENT_H_INCLUDED

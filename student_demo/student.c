@@ -184,3 +184,34 @@ int findAVMark(TStudent group[], unsigned lenGroup, int start, float mark)
     }
     return -1;
 }
+
+void writeToBin(char *fname,TStudent group[], unsigned lenGroup)
+{
+    FILE *f = fopen(fname,"wb");
+
+    if(f==NULL){
+        perror(NULL);
+        exit(EXIT_FAILURE);
+    }
+
+    fwrite(group,sizeof(TStudent),lenGroup,f);
+    fclose(f);
+}
+void readFromBin(char *fname,TStudent group[], unsigned lenGroup)
+{
+    FILE *f = fopen(fname,"rb");
+
+    if(f==NULL){
+        perror(NULL);
+        exit(EXIT_FAILURE);
+    }
+
+    if (fread(group,sizeof(TStudent),lenGroup,f)!=lenGroup){
+        if(!feof(f)){
+            perror(NULL);
+            fclose(f);
+            exit(EXIT_FAILURE);
+        }
+    }
+    fclose(f);
+}

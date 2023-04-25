@@ -6,6 +6,7 @@ int main()
     int index;
 //    TStudent st;
     TStudent group[SIZE];
+    TStudent group1[SIZE];
 
 //    st = input();
 //    print(st);
@@ -59,6 +60,10 @@ int main()
         printf("No such data...\n");
     else
         print(group[index]);
+    printf("-----BIN-------\n");
+    writeToBin("students.bin",group,5);
+    readFromBin("students.bin",group1,5);
+    printGroup(group1,5);
 //    printf("Hello world!\n");
     return 0;
 }

@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1680006873 source:d:\bpl\samples\student_demo\main.c
+1682424895 source:d:\bpl\samples\student_demo\main.c
 	"student.h"
 
-1680007894 d:\bpl\samples\student_demo\student.h
+1682424821 d:\bpl\samples\student_demo\student.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1680007924 source:d:\bpl\samples\student_demo\student.c
+1682425244 source:d:\bpl\samples\student_demo\student.c
 	"student.h"
 
