@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1739884846 source:c:\samples\fpl\strexample\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
