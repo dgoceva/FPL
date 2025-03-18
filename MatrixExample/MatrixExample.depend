@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1742304082 source:c:\samples\fpl\matrixexample\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1742303937 c:\samples\fpl\matrixexample\main.h
+

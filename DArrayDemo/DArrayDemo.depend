@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1742307886 source:c:\samples\fpl\darraydemo\data.c
+	"data.h"
+
+1742307804 c:\samples\fpl\darraydemo\data.h
+	<stdio.h>
+	<stdlib.h>
+
