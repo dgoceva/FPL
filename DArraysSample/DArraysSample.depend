@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1742370653 source:c:\samples\fpl\darrayssample\array.c
+	"array.h"
+
+1742370520 c:\samples\fpl\darrayssample\array.h
+	<stdio.h>
+	<stdlib.h>
+
+1742370302 source:c:\samples\fpl\darrayssample\main.c
+	"array.h"
+
