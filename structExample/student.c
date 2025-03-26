@@ -31,4 +31,45 @@ void inputCSV(char *fname,TStudent *group,unsigned size)
         perror(NULL);
         exit(errno);
     }
+    group[0] = readStudent(fin);
+    fclose(fin);
+}
+
+TStudent readStudent(FILE *fin)
+{
+    TStudent st;
+    char buff[1000];
+    char *token;
+
+    if (fgets(buff,sizeof(buff),fin)==NULL){
+        perror(NULL);
+        fclose(fin);
+        exit(EXIT_FAILURE);
+    }
+
+    token = strtok(buff,",");
+    if (token==NULL){
+        printf("Error in data\n");
+        fclose(fin);
+        exit(EXIT_FAILURE);
+    }
+    sscanf(token,"%u",&st.fNo);
+
+    token = strtok(NULL,",");
+    if (token==NULL){
+        printf("Error in data\n");
+        fclose(fin);
+        exit(EXIT_FAILURE);
+    }
+    strcpy(st.name,token);
+
+    token = strtok(NULL,",");
+    if (token==NULL){
+        printf("Error in data\n");
+        fclose(fin);
+        exit(EXIT_FAILURE);
+    }
+    sscanf(token,"%f",&st.avMark);
+
+    return st;
 }

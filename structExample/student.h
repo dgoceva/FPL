@@ -18,5 +18,6 @@ typedef struct TTStudent TStudent;
 TStudent  input();
 void output(TStudent st);
 void inputCSV(char *fname,TStudent *group,unsigned size);
+TStudent readStudent(FILE *fin);
 
 #endif // STUDENT_H_INCLUDED
