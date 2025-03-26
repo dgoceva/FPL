@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1742971529 source:c:\samples\fpl\structexample\main.c
+	"student.h"
+
+1742971584 c:\samples\fpl\structexample\student.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1742971549 source:c:\samples\fpl\structexample\student.c
+	"student.h"
+
