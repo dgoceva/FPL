@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1743508069 source:c:\samples\fpl\txtfilesdemo\main.c
+	"main.h"
+
+1743507719 c:\samples\fpl\txtfilesdemo\main.h
+	<stdio.h>
+	<stdlib.h>
+
