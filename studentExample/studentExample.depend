@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1743574712 source:c:\samples\fpl\studentexample\student.c
+	"student.h"
+
+1743574731 c:\samples\fpl\studentexample\student.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<malloc.h>
+

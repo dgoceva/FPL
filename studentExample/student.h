@@ -4,9 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <malloc.h>
 
 #define LEN 50
 #define SIZE 10
+
+typedef enum {false,true} TBoolean;
 
 struct TTStudent {
     unsigned fNo;
@@ -16,12 +19,8 @@ struct TTStudent {
 
 typedef struct TTStudent TStudent;
 
-TStudent  input();
-void output(TStudent st);
-unsigned inputCSV(char *fname,TStudent *group,unsigned size);
-TStudent readStudent(FILE *fin);
-unsigned countStudents(FILE *fin);
+TStudent* inputCSV(char *fname,unsigned *size);
+TStudent* readStudent(FILE *fin, TStudent *st);
 void outputGroup(TStudent *group, unsigned size);
-float averageGroupMark(TStudent *group, unsigned size);
 
 #endif // STUDENT_H_INCLUDED

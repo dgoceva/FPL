@@ -2,11 +2,11 @@
 1742973341 source:c:\samples\fpl\structexample\main.c
 	"student.h"
 
-1742973151 c:\samples\fpl\structexample\student.h
+1743572471 c:\samples\fpl\structexample\student.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1742971549 source:c:\samples\fpl\structexample\student.c
+1743572451 source:c:\samples\fpl\structexample\student.c
 	"student.h"
 

@@ -22,17 +22,26 @@ void output(TStudent st)
     printf("(%u, %s, %.2f)\n",st.fNo,st.name,st.avMark);
 }
 
-void inputCSV(char *fname,TStudent *group,unsigned size)
+unsigned inputCSV(char *fname,TStudent *group,unsigned size)
 {
     FILE *fin;
+    unsigned len;
 
     fin = fopen(fname,"r");
     if (fin == NULL){
         perror(NULL);
         exit(errno);
     }
-    group[0] = readStudent(fin);
+
+    len = countStudents(fin);
+    if (len > size)
+        len = size;
+
+    for (int i=0;i<len;++i){
+        group[i] = readStudent(fin);
+    }
     fclose(fin);
+    return len;
 }
 
 TStudent readStudent(FILE *fin)
@@ -72,4 +81,34 @@ TStudent readStudent(FILE *fin)
     sscanf(token,"%f",&st.avMark);
 
     return st;
+}
+
+unsigned countStudents(FILE *fin)
+{
+    unsigned counter=0;
+    char buff[1000];
+
+    while (fgets(buff,sizeof(buff),fin)!=NULL){
+        counter++;
+    }
+    rewind(fin);
+    return counter;
+}
+
+void outputGroup(TStudent *group, unsigned size)
+{
+    for (int i=0;i<size;++i){
+        output(group[i]);
+    }
+}
+
+float averageGroupMark(TStudent *group, unsigned size)
+{
+    float sum = 0;
+
+    for (int i=0;i<size;++i){
+        sum += group[i].avMark;
+    }
+
+    return (size>0) ? sum/size : 0;
 }
