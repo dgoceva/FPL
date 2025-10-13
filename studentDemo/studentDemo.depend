@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1744115289 source:c:\samples\fpl\studentdemo\main.c
+	"student.h"
+
+1744116126 c:\samples\fpl\studentdemo\student.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1744116099 source:c:\samples\fpl\studentdemo\student.c
+	"student.h"
+
