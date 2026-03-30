@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1774854185 source:d:\pl_en\samples\pointerdemo\main.c
+	"matrix.h"
+
+1774850837 source:d:\pl_en\samples\pointerdemo\matrix.c
+	"matrix.h"
+
+1774854192 d:\pl_en\samples\pointerdemo\matrix.h
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+
