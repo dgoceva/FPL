@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1775454376 source:d:\pl_en\samples\structdemo\main.c
+	"student.h"
+
+1775455705 d:\pl_en\samples\structdemo\student.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1775454664 source:d:\pl_en\samples\structdemo\student.c
+	"student.h"
+
